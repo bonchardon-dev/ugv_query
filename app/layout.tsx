@@ -20,9 +20,9 @@ const chakra = Chakra_Petch({
 })
 
 export const metadata: Metadata = {
-  title: 'Хто ти з НРК? | AURF',
+  title: 'Хто ти з НРК? | Ukrainian Robotics Forces',
   description:
-    'Пройди опитування Асоціації «Українські Роботизовані Сили» (AURF) і дізнайся, який наземний роботизований комплекс відповідає твоєму характеру.',
+    'Пройди опитування Ukrainian Robotics Forces (Українські Роботизовані Сили) і дізнайся, який наземний роботизований комплекс відповідає твоєму характеру.',
   generator: 'v0.app',
 }
 

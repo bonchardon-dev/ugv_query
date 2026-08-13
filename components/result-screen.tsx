@@ -83,16 +83,27 @@ export function ResultScreen({
 
       {/* Closing word about the alliance */}
       <div className="mt-8 rounded-lg border border-border bg-card/60 p-6 sm:p-8">
-        <h2 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-primary">
-          Про альянс
-        </h2>
+        <div className="flex items-center gap-3">
+          <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-sm border border-border bg-secondary">
+            <Image
+              src="/urf-logo.png"
+              alt="Логотип Ukrainian Robotics Forces"
+              fill
+              sizes="36px"
+              className="object-contain"
+            />
+          </div>
+          <h2 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+            Про альянс
+          </h2>
+        </div>
         <p className="mt-3 text-pretty text-sm leading-relaxed text-muted-foreground sm:text-base">
-          Асоціація «Українські Роботизовані Сили» (AURF) об&apos;єднує розробників,
-          виробників та операторів наземних роботизованих комплексів. Кожен НРК —
-          логістичний, ударний, медичний чи саперний — виконує свою роль, і саме
-          разом вони зберігають найголовніше: життя українських захисників. Немає
-          «кращого» чи «гіршого» комплексу — є єдина система, де важливий кожен.
-          Дякуємо, що цікавишся українськими роботизованими силами.
+          Ukrainian Robotics Forces — Українські Роботизовані Сили — об&apos;єднує
+          розробників, виробників та операторів наземних роботизованих комплексів.
+          Кожен НРК — логістичний, ударний, медичний чи саперний — виконує свою
+          роль, і саме разом вони зберігають найголовніше: життя українських
+          захисників. Немає «кращого» чи «гіршого» комплексу — є єдина система, де
+          важливий кожен. Дякуємо, що цікавишся українськими роботизованими силами.
         </p>
       </div>
 
