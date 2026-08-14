@@ -1,19 +1,22 @@
 "use client"
 
 import Image from "next/image"
-import { RotateCcw, Crosshair } from "lucide-react"
+import { RotateCcw, Crosshair, Radio } from "lucide-react"
 import type { NrkId } from "@/lib/quiz-data"
-import { NRKS } from "@/lib/quiz-data"
+import { NRKS, generateCallsign } from "@/lib/quiz-data"
 import { Button } from "@/components/ui/button"
 
 export function ResultScreen({
   resultId,
+  answers,
   onRestart,
 }: {
   resultId: NrkId
+  answers: number[]
   onRestart: () => void
 }) {
   const nrk = NRKS[resultId]
+  const callsign = generateCallsign(resultId, answers)
 
   return (
     <div className="mx-auto w-full max-w-3xl px-6 pb-24 pt-6 animate-in fade-in duration-500">
@@ -78,6 +81,25 @@ export function ResultScreen({
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Operator callsign */}
+      <div className="mt-8 overflow-hidden rounded-lg border border-primary/40 bg-primary/5">
+        <div className="flex items-center gap-2 border-b border-primary/20 bg-primary/10 px-5 py-2.5">
+          <Radio className="h-4 w-4 text-primary" />
+          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-primary">
+            Твій позивний
+          </p>
+        </div>
+        <div className="px-5 py-6 text-center sm:py-8">
+          <p className="font-display text-4xl font-bold uppercase tracking-tight text-foreground sm:text-5xl">
+            «{callsign}»
+          </p>
+          <p className="mt-3 text-pretty text-sm text-muted-foreground">
+            Записуй у профіль оператора: ти працюєш у парі з {nrk.name}. Ласкаво
+            просимо до лав роботизованих сил.
+          </p>
         </div>
       </div>
 
