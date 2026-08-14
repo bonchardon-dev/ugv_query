@@ -381,10 +381,10 @@ export const QUESTIONS: Question[] = [
     id: 9,
     prompt: "Твоє ставлення до ризику?",
     options: [
-      { label: "Ризик — це і є моя робота", weights: { "ratel-s": 2, "gnom-m5": 1 } },
-      { label: "Іду на нього заради інших", weights: { dropla: 2, "gnom-l2": 1 } },
-      { label: "Мінімізую його розрахунком", weights: { d21: 2, termit: 1 } },
-      { label: "Беру стільки, скільки витримаю", weights: { ravlyk: 2, bufalo: 1 } },
+      { label: "Ризик — це і є моя робота", weights: { "ratel-s": 2, minuvalnyk: 1 } },
+      { label: "Іду на нього заради інших", weights: { elektronoshi: 2, "ratel-h": 1 } },
+      { label: "Мінімізую його розрахунком", weights: { d12: 2, "ratel-m": 1 } },
+      { label: "Беру стільки, скільки витримаю", weights: { ravlyk: 2, konyk: 1 } },
     ],
   },
   {
