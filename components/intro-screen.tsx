@@ -3,11 +3,10 @@
 import Image from "next/image"
 import { ArrowRight, Crosshair, Gauge, Layers } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { QUESTIONS, NRKS } from "@/lib/quiz-data"
+import { QUESTIONS } from "@/lib/quiz-data"
 
 export function IntroScreen({ onStart }: { onStart: () => void }) {
   const questionCount = QUESTIONS.length
-  const nrkCount = Object.keys(NRKS).length
   return (
     <div className="mx-auto flex max-w-2xl flex-col items-center px-6 pb-20 pt-10 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
       <a
@@ -45,7 +44,7 @@ export function IntroScreen({ onStart }: { onStart: () => void }) {
       <div className="mt-10 grid w-full grid-cols-1 gap-3 sm:grid-cols-3">
         {[
           { icon: Layers, label: `${questionCount} запитань`, sub: "коротко й по суті" },
-          { icon: Gauge, label: `${nrkCount} комплексів`, sub: "від ударних до саперних" },
+          { icon: Gauge, label: "Десятки НРК", sub: "від ударних до саперних" },
           { icon: Crosshair, label: "1 результат", sub: "твій позивний" },
         ].map(({ icon: Icon, label, sub }) => (
           <div
