@@ -84,23 +84,6 @@ export function ResultScreen({
         </div>
       </div>
 
-      {/* Assigned callsign */}
-      <div className="mt-6 overflow-hidden rounded-lg border border-primary/40 bg-primary/5">
-        <div className="flex items-center gap-4 p-5 sm:p-6">
-          <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-primary/40 bg-background/60 text-primary">
-            <Radio className="h-5 w-5" />
-          </div>
-          <div className="min-w-0">
-            <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-muted-foreground">
-              Твій позивний
-            </p>
-            <p className="mt-1 truncate font-display text-2xl font-bold uppercase tracking-tight text-primary sm:text-3xl">
-              «{callsign}»
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* Operator callsign */}
       <div className="mt-8 overflow-hidden rounded-lg border border-primary/40 bg-primary/5">
         <div className="flex items-center gap-2 border-b border-primary/20 bg-primary/10 px-5 py-2.5">
