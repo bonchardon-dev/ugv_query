@@ -459,6 +459,34 @@ export const QUESTIONS: Question[] = [
   },
 ]
 
+const CALLSIGN_POOLS: Record<NrkId, string[]> = {
+  "ratel-s": ["Клинок", "Іскра", "Стилет", "Блискавка"],
+  d21: ["Молот", "Приціл", "Бастіон", "Залізо"],
+  maul: ["Вихор", "Комета", "Ривок", "Спалах"],
+  bufalo: ["Титан", "Атлант", "Граніт", "Ведмідь"],
+  t700: ["Обрій", "Кордон", "Марафон", "Далина"],
+  ravlyk: ["Валет", "Кремінь", "Домкрат", "Важіль"],
+  terrikon: ["Скеля", "Терикон", "Валун", "Хребет"],
+  tanchik: ["Кремінь", "Опора", "Броня", "Кувалда"],
+  "gnom-l2": ["Стриж", "Кур'єр", "Шершень", "Тінь"],
+  "gnom-nd": ["Око", "Беркут", "Радар", "Сокіл"],
+  "gnom-m5": ["Скальпель", "Пінцет", "Годинник", "Сапер"],
+  termit: ["Протокол", "Розряд", "Циркуль", "Майстер"],
+  dropla: ["Крапля", "Човник", "Провід", "Стежка"],
+  guliver: ["Універсал", "Конструктор", "Модуль", "Флагман"],
+  konyk: ["Вузол", "Диспетчер", "Маяк", "Мережа"],
+}
+
+// Deterministic callsign from the result and the full answer pattern, so the
+// same run always yields the same callsign but different runs vary.
+export function generateCallsign(resultId: NrkId, answers: number[]): string {
+  const pool = CALLSIGN_POOLS[resultId]
+  const seed = answers.reduce((acc, val, i) => acc + (val + 1) * (i + 1), 0)
+  const word = pool[seed % pool.length]
+  const number = ((seed * 7) % 99) + 1
+  return `${word}-${String(number).padStart(2, "0")}`
+}
+
 export function computeResult(answers: number[]): NrkId {
   const scores: Record<string, number> = {}
   answers.forEach((optionIndex, qIndex) => {

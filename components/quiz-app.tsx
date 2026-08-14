@@ -68,7 +68,7 @@ export function QuizApp() {
         )}
 
         {stage === "result" && result && (
-          <ResultScreen resultId={result} onRestart={start} />
+          <ResultScreen resultId={result} answers={answers} onRestart={start} />
         )}
       </div>
     </main>
