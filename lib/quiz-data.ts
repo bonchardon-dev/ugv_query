@@ -257,7 +257,7 @@ export const QUESTIONS: Question[] = [
     options: [
       { label: "Ризик — це і є моя робота", weights: { "ratel-s": 2, minuvalnyk: 1 } },
       { label: "Іду на нього заради інших", weights: { elektronoshi: 2, "ratel-h": 1 } },
-      { label: "Мінімізую його розрахунком", weights: { d12: 2, "ratel-m": 1 } },
+      { label: "Мінімізую й��го розрахунком", weights: { d12: 2, "ratel-m": 1 } },
       { label: "Беру стільки, скільки витримаю", weights: { ravlyk: 2, konyk: 1 } },
     ],
   },
@@ -276,7 +276,7 @@ export const QUESTIONS: Question[] = [
     prompt: "Як ти відновлюєш ресурс після важкого виходу?",
     options: [
       { label: "Швидка підзарядка — і знову в бій", weights: { "ratel-s": 2, konyk: 1 } },
-      { label: "Ґрунтовне ТО, щоб пройти ще далі", weights: { "ratel-m": 2, ravlyk: 1 } },
+      { label: "Ґрунтовне обслуговування, щоб пройти ще далі", weights: { "ratel-m": 2, ravlyk: 1 } },
       { label: "Перевірка кожного вузла за протоколом", weights: { minuvalnyk: 2, d12: 1 } },
       { label: "Головне — щоб побратими були в порядку", weights: { elektronoshi: 2, "ratel-h": 1 } },
     ],
