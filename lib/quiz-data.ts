@@ -257,7 +257,7 @@ export const QUESTIONS: Question[] = [
     options: [
       { label: "Ризик — це і є моя робота", weights: { "ratel-s": 2, minuvalnyk: 1 } },
       { label: "Іду на нього заради інших", weights: { elektronoshi: 2, "ratel-h": 1 } },
-      { label: "Мінімізую й��го розрахунком", weights: { d12: 2, "ratel-m": 1 } },
+      { label: "Мінімізую його розрахунком", weights: { d12: 2, "ratel-m": 1 } },
       { label: "Беру стільки, скільки витримаю", weights: { ravlyk: 2, konyk: 1 } },
     ],
   },
