@@ -257,7 +257,7 @@ export const QUESTIONS: Question[] = [
     options: [
       { label: "Ризик — це і є моя робота", weights: { "ratel-s": 2, minuvalnyk: 1 } },
       { label: "Іду на нього заради інших", weights: { elektronoshi: 2, "ratel-h": 1 } },
-      { label: "Мінімізую його розрахунком", weights: { d12: 2, "ratel-m": 1 } },
+      { label: "Мінімізую й��го розрахунком", weights: { d12: 2, "ratel-m": 1 } },
       { label: "Беру стільки, скільки витримаю", weights: { ravlyk: 2, konyk: 1 } },
     ],
   },
@@ -269,6 +269,66 @@ export const QUESTIONS: Question[] = [
       { label: "Усі побратими нагодовані й у безпеці", weights: { "ratel-h": 2, elektronoshi: 1 } },
       { label: "Пройдено рекордну відстань", weights: { "ratel-m": 2, ravlyk: 1 } },
       { label: "Усе спрацювало точно, як за таблицею", weights: { d12: 2, minuvalnyk: 1 } },
+    ],
+  },
+  {
+    id: 11,
+    prompt: "Як ти відновлюєш ресурс після важкого виходу?",
+    options: [
+      { label: "Швидка підзарядка — і знову в бій", weights: { "ratel-s": 2, konyk: 1 } },
+      { label: "Ґрунтовне ТО, щоб пройти ще далі", weights: { "ratel-m": 2, ravlyk: 1 } },
+      { label: "Перевірка кожного вузла за протоколом", weights: { minuvalnyk: 2, d12: 1 } },
+      { label: "Головне — щоб побратими були в порядку", weights: { elektronoshi: 2, "ratel-h": 1 } },
+    ],
+  },
+  {
+    id: 12,
+    prompt: "Що для тебе найважливіше в спорядженні?",
+    options: [
+      { label: "Легкість і швидкість", weights: { konyk: 2, "ratel-s": 1 } },
+      { label: "Місткість і вантажопідйомність", weights: { ravlyk: 2, "ratel-h": 1 } },
+      { label: "Оптика й точні прилади", weights: { d12: 2, minuvalnyk: 1 } },
+      { label: "Запас палива й ходу", weights: { "ratel-m": 2, elektronoshi: 1 } },
+    ],
+  },
+  {
+    id: 13,
+    prompt: "Твій стиль ухвалення рішень?",
+    options: [
+      { label: "Миттєво, за інстинктом", weights: { "ratel-s": 2, ravlyk: 1 } },
+      { label: "Зважено, за розрахунком", weights: { d12: 2, "ratel-m": 1 } },
+      { label: "Обережно, крок за кроком", weights: { minuvalnyk: 2, elektronoshi: 1 } },
+      { label: "Гнучко, залежно від ситуації", weights: { konyk: 2, "ratel-h": 1 } },
+    ],
+  },
+  {
+    id: 14,
+    prompt: "Яке завдання дає тобі найбільше задоволення?",
+    options: [
+      { label: "Прорив до складної цілі", weights: { "ratel-s": 2, d12: 1 } },
+      { label: "Доставка туди, куди ніхто не дійде", weights: { "ratel-m": 2, ravlyk: 1 } },
+      { label: "Порятунок побратима з-під вогню", weights: { elektronoshi: 2, "ratel-h": 1 } },
+      { label: "Знешкодження загрози без жодної помилки", weights: { minuvalnyk: 2, konyk: 1 } },
+    ],
+  },
+  {
+    id: 15,
+    prompt: "Що тебе найбільше дратує?",
+    options: [
+      { label: "Зволікання й довгі наради", weights: { "ratel-s": 2, konyk: 1 } },
+      { label: "Коли хтось лишається без допомоги", weights: { elektronoshi: 2, "ratel-h": 1 } },
+      { label: "Неточність і халатність", weights: { d12: 2, minuvalnyk: 1 } },
+      { label: "Коли недооцінюють мою витривалість", weights: { "ratel-m": 2, ravlyk: 1 } },
+    ],
+  },
+  {
+    id: 16,
+    prompt: "Обери свою суперсилу.",
+    options: [
+      { label: "Блискавична реакція", weights: { "ratel-s": 2, konyk: 1 } },
+      { label: "Залізна витримка", weights: { "ratel-m": 2, minuvalnyk: 1 } },
+      { label: "Незламна надійність", weights: { "ratel-h": 2, ravlyk: 1 } },
+      { label: "Гострий зір і точність", weights: { d12: 2, elektronoshi: 1 } },
     ],
   },
 ]
