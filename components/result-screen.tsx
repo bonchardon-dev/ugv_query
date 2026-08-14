@@ -84,7 +84,13 @@ export function ResultScreen({
       {/* Closing word about the alliance */}
       <div className="mt-8 rounded-lg border border-border bg-card/60 p-6 sm:p-8">
         <div className="flex items-center gap-3">
-          <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-sm border border-border bg-secondary">
+          <a
+            href="https://urfua.company"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Перейти на сайт Ukrainian Robotics Forces"
+            className="relative block h-9 w-9 shrink-0 overflow-hidden rounded-sm border border-border bg-secondary transition-colors hover:border-primary"
+          >
             <Image
               src="/urf-logo.png"
               alt="Логотип Ukrainian Robotics Forces"
@@ -92,7 +98,7 @@ export function ResultScreen({
               sizes="36px"
               className="object-contain"
             />
-          </div>
+          </a>
           <h2 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-primary">
             Про альянс
           </h2>

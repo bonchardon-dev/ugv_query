@@ -7,7 +7,13 @@ import { Button } from "@/components/ui/button"
 export function IntroScreen({ onStart }: { onStart: () => void }) {
   return (
     <div className="mx-auto flex max-w-2xl flex-col items-center px-6 pb-20 pt-10 text-center animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="relative mb-8 h-24 w-24 overflow-hidden rounded-lg border border-border bg-secondary">
+      <a
+        href="https://urfua.company"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Перейти на сайт Ukrainian Robotics Forces"
+        className="relative mb-8 block h-24 w-24 overflow-hidden rounded-lg border border-border bg-secondary transition-colors hover:border-primary"
+      >
         <Image
           src="/urf-logo.png"
           alt="Логотип Ukrainian Robotics Forces"
@@ -16,7 +22,7 @@ export function IntroScreen({ onStart }: { onStart: () => void }) {
           className="object-contain p-1"
           priority
         />
-      </div>
+      </a>
 
       <span className="mb-6 inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
         <Crosshair className="h-3.5 w-3.5 text-primary" />
