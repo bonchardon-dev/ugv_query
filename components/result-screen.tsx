@@ -135,6 +135,26 @@ export function ResultScreen({
         </p>
       </div>
 
+      {/* Social QR codes */}
+      <div className="mt-8 overflow-hidden rounded-lg border border-border bg-card/60 p-6 sm:p-8">
+        <h2 className="text-center font-display text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+          Стежте за нами
+        </h2>
+        <p className="mx-auto mt-2 max-w-md text-pretty text-center text-sm leading-relaxed text-muted-foreground">
+          Скануй QR-код, щоб приєднатися до спільноти Ukrainian Robotics Forces у
+          соцмережах.
+        </p>
+        <div className="mt-6 overflow-hidden rounded-md border border-border">
+          <Image
+            src="/urf-socials-qr.png"
+            alt="QR-коди на сторінки Ukrainian Robotics Forces у Facebook, Instagram та LinkedIn"
+            width={1720}
+            height={700}
+            className="h-auto w-full"
+          />
+        </div>
+      </div>
+
       <div className="mt-8 flex justify-center">
         <Button
           size="lg"
