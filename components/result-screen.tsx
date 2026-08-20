@@ -37,6 +37,7 @@ export function ResultScreen({
             height={520}
             className="mx-auto h-64 w-full object-contain p-6 sm:h-80"
             priority
+            unoptimized
           />
         </div>
 
@@ -119,6 +120,7 @@ export function ResultScreen({
               fill
               sizes="36px"
               className="object-contain"
+              unoptimized
             />
           </a>
           <h2 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-primary">
@@ -166,6 +168,7 @@ export function ResultScreen({
                   width={435}
                   height={435}
                   className="h-auto w-full"
+                  unoptimized
                 />
               </div>
             </div>

@@ -23,6 +23,7 @@ export function IntroScreen({ onStart }: { onStart: () => void }) {
           sizes="96px"
           className="object-contain p-1"
           priority
+          unoptimized
         />
       </a>
 
