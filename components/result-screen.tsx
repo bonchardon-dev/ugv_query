@@ -144,14 +144,32 @@ export function ResultScreen({
           Скануй QR-код, щоб приєднатися до спільноти Ukrainian Robotics Forces у
           соцмережах.
         </p>
-        <div className="mt-6 overflow-hidden rounded-md border border-border">
-          <Image
-            src="/urf-socials-qr.png"
-            alt="QR-коди на сторінки Ukrainian Robotics Forces у Facebook, Instagram та LinkedIn"
-            width={1720}
-            height={700}
-            className="h-auto w-full"
-          />
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {[
+            { name: "Facebook", src: "/qr-facebook.png" },
+            { name: "Instagram", src: "/qr-instagram.png" },
+            { name: "LinkedIn", src: "/qr-linkedin.png" },
+          ].map((social) => (
+            <div
+              key={social.name}
+              className="flex flex-col items-center rounded-md border border-border bg-background/40 p-4"
+            >
+              <div className="flex items-center gap-2 text-foreground">
+                <span className="font-display text-xs font-semibold uppercase tracking-[0.15em] text-primary">
+                  {social.name}
+                </span>
+              </div>
+              <div className="mt-3 overflow-hidden rounded bg-white p-2">
+                <Image
+                  src={social.src || "/placeholder.svg"}
+                  alt={`QR-код на сторінку Ukrainian Robotics Forces у ${social.name}`}
+                  width={435}
+                  height={435}
+                  className="h-auto w-full"
+                />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 
