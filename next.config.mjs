@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  // Static export only for production builds (used for the urfua.company deploy).
+  // In dev the export mode breaks the preview server, so keep it off there.
+  ...(process.env.NODE_ENV === "production" ? { output: "export" } : {}),
   typescript: {
     ignoreBuildErrors: true,
   },
