@@ -12,6 +12,7 @@ export function AurfMark({ className }: { className?: string }) {
           sizes="40px"
           className="object-contain"
           priority
+          unoptimized
         />
       </div>
       <div className="leading-tight">

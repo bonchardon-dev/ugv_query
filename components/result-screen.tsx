@@ -37,6 +37,7 @@ export function ResultScreen({
             height={520}
             className="mx-auto h-64 w-full object-contain p-6 sm:h-80"
             priority
+            unoptimized
           />
         </div>
 
@@ -119,6 +120,7 @@ export function ResultScreen({
               fill
               sizes="36px"
               className="object-contain"
+              unoptimized
             />
           </a>
           <h2 className="font-display text-sm font-semibold uppercase tracking-[0.18em] text-primary">
@@ -133,6 +135,45 @@ export function ResultScreen({
           захисників. Немає «кращого» чи «гіршого» комплексу — є єдина система, де
           важливий кожен. Дякуємо, що цікавишся українськими роботизованими силами.
         </p>
+      </div>
+
+      {/* Social QR codes */}
+      <div className="mt-8 overflow-hidden rounded-lg border border-border bg-card/60 p-6 sm:p-8">
+        <h2 className="text-center font-display text-sm font-semibold uppercase tracking-[0.18em] text-primary">
+          Стежте за нами
+        </h2>
+        <p className="mx-auto mt-2 max-w-md text-pretty text-center text-sm leading-relaxed text-muted-foreground">
+          Скануй QR-код, щоб приєднатися до спільноти Ukrainian Robotics Forces у
+          соцмережах.
+        </p>
+        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {[
+            { name: "Facebook", src: "/qr-facebook.png" },
+            { name: "Instagram", src: "/qr-instagram.png" },
+            { name: "LinkedIn", src: "/qr-linkedin.png" },
+          ].map((social) => (
+            <div
+              key={social.name}
+              className="flex flex-col items-center rounded-md border border-border bg-background/40 p-4"
+            >
+              <div className="flex items-center gap-2 text-foreground">
+                <span className="font-display text-xs font-semibold uppercase tracking-[0.15em] text-primary">
+                  {social.name}
+                </span>
+              </div>
+              <div className="mt-3 overflow-hidden rounded bg-white p-2">
+                <Image
+                  src={social.src || "/placeholder.svg"}
+                  alt={`QR-код на сторінку Ukrainian Robotics Forces у ${social.name}`}
+                  width={435}
+                  height={435}
+                  className="h-auto w-full"
+                  unoptimized
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="mt-8 flex justify-center">
